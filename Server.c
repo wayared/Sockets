@@ -62,7 +62,21 @@ int main(int argc, char *argv[] ){
 
 		n = write(newsockfd, buffer , strlen(buffer));
 
+		if(n < 0){
+			error("Error on writting");
+
+		}
+		int i = strncmp("Bye", buffer , 3);
+		if(i == 0){
+			break;
+		}
+
+
 	}
+	
+	close(newsockfd);
+	close(sockfd);
+	return 0;
 
 
 
