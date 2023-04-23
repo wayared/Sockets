@@ -13,6 +13,22 @@ void error(const char *msg){
 
 int main(int argc, char *argv[] ){
 
+	if(argc < 2){
+		fprintf(stderr, "Port No not provided. Program terminated\n");
+		exit(1);
+
+	}
+
+	int sockfd , newsockfd, portno, n;
+	char buffer[255];
+
+	struct sockaddr_in serv_addr , cli_addr;
+	socklen_t clilen;
+
+	sockfd = socket(AF_INET, SOCK_STREAM, 0);
+
+
+
 
 
 }
