@@ -20,6 +20,23 @@ void error(const char *msg){
 }
 
 int main(int argc, char *argv[]){
+	int sockfd, portno, n;
+	struct sockaddr_in serv_addr;
+	struct hostent *server;
+
+	char buffer[256];
+
+	if(argc < 3){
+		fprintf(stderr, "usage %s hostname port\n", argv[0]);
+		exit(0);
+	}
+
+	portno = atoi(argv[2]);
+	sockfd = socket(AF_INET, SOCK_STREAM,0);
+	if(sockfd < 0){
+		error("ERROR opening socket");
+
+	}
 
 
 }
