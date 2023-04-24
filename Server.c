@@ -28,7 +28,7 @@ int main(int argc, char *argv[] ){
 	sockfd = socket(AF_INET, SOCK_STREAM, 0);
 
 	if(sockfd < 0){
-		error("Error opening Socket.")
+		error("Error opening Socket.");
 
 	}
 
