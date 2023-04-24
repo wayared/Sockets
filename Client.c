@@ -14,4 +14,13 @@
 #include <netinet/in.h>
 #include <netdb.h>
 
+void error(const char *msg){
+	perror(msg);
+	exit(0);
+}
+
+int main(int argc, char *argv[]){
+
+
+}
 
