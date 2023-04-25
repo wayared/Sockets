@@ -51,6 +51,14 @@ int main(int argc, char *argv[]){
 		error("Connection Failed");
 	}
 
+	while(1){
+		bzero(buffer, 225);
+		fgets(buffer, 255, stdin);
+		n = write(sockfd, buffer, strlen(buffer));
+
+
+	}
+
 
 }
 
