@@ -55,10 +55,30 @@ int main(int argc, char *argv[]){
 		bzero(buffer, 225);
 		fgets(buffer, 255, stdin);
 		n = write(sockfd, buffer, strlen(buffer));
+		
+		if(n < 0){
+			error("Error on writing");
+		}	
 
+		bzero(buffer, 255);
+		n = read(sockfd, buffer, 255);
+
+		if(n < 0){
+			error("Error on reading");
+		}
+
+		printf("Server: %s", buffer);
+
+		int i = strncmp("Bye", buffer, 3);
+
+		if(i == 0){
+			break;
+		}
 
 	}
-
+	
+	close(sockfd);
+	return 0;
 
 }
 
