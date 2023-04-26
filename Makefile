@@ -4,7 +4,7 @@ CLIE = client
 server: Server.c
 	gcc -o server Server.c
 
-client: client.c
+client: Client.c
 	gcc -o client Client.c
 
 clean:
