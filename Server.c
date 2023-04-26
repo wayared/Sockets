@@ -9,7 +9,7 @@
 void error(const char *msg){
 	perror(msg);
 	exit(1);
-}
+} 
 
 int main(int argc, char *argv[] ){
 
@@ -25,7 +25,9 @@ int main(int argc, char *argv[] ){
 	struct sockaddr_in serv_addr , cli_addr;
 	socklen_t clilen;
 
-	sockfd = socket(AF_INET, SOCK_STREAM, 0);
+	sockfd = socket(AF_INET, SOCK_STREAM, 0); //AF_INET = IPV4
+						  //SOCK_STREAM = TCP
+						  //SOCK_DGRAM = UDP
 
 	if(sockfd < 0){
 		error("Error opening Socket.");
