@@ -1,7 +1,7 @@
 SERV = server
 CLIE = client
 
-server: Server.c
+server: client Server.c
 	gcc -o server Server.c
 
 client: Client.c
